@@ -1,0 +1,169 @@
+.resume {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 32px;
+  display: grid;
+  gap: 32px;
+}
+
+.resume-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(170, 59, 255, 0.08);
+  border: 1px solid rgba(170, 59, 255, 0.18);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.resume-header h1 {
+  margin: 0;
+  font-size: clamp(2.75rem, 2.5vw, 4rem);
+  line-height: 0.95;
+}
+
+.subtitle {
+  margin: 16px 0 0;
+  max-width: 560px;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.contact-card {
+  min-width: 240px;
+  padding: 20px;
+  border-radius: 22px;
+  background: #211a2f80;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.contact-card p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+  color: white;
+}
+
+.section {
+  display: grid;
+  gap: 24px;
+}
+
+.section h2 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  color: var(--text-h);
+}
+
+.about p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text);
+}
+
+.grid-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 32px;
+}
+
+.card,
+.sidebar {
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid var(--border);
+  background: #211a2f80;
+  box-shadow: var(--shadow);
+}
+
+.experience-item + .experience-item {
+  margin-top: 24px;
+}
+
+.experience-item h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #e7e7e7e0;
+}
+
+.small {
+  margin: 8px 0 16px;
+  color: #e7e7e7e0;
+  font-size: 0.95rem;
+}
+
+.experience-item ul,
+.skills-list {
+  margin: 0;
+  padding-left: 20px;
+  color: #e7e7e7e0
+}
+
+.experience-item li,
+.skills-list li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.skills-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 16px;
+  padding-left: 0;
+  color: #e7e7e7e0;
+}
+
+.skills-list li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.skills-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+@media (max-width: 1024px) {
+  .resume {
+    padding: 24px 20px;
+  }
+
+  .resume-header,
+  .card,
+  .sidebar {
+    padding: 24px;
+  }
+
+  .resume-header {
+    flex-direction: column;
+  }
+
+  .grid-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .resume {
+    padding: 20px 18px;
+  }
+
+  .contact-card {
+    min-width: 0;
+  }
+}
